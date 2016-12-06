@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD53BD04-2BDD-4F9A-BC32-FEFEDC68F31D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Git_Test_1</RootNamespace>
+    <AssemblyName>Git Test 1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlLayer\EmployeeController.cs" />
+    <Compile Include="ControlLayer\ImageController.cs" />
+    <Compile Include="ControlLayer\InventoryController.cs" />
+    <Compile Include="ControlLayer\JobController.cs" />
+    <Compile Include="ControlLayer\LogBookController.cs" />
+    <Compile Include="ControlLayer\SettingsController.cs" />
+    <Compile Include="DataLayer\EmployeeDB.cs" />
+    <Compile Include="DataLayer\InventoryDB.cs" />
+    <Compile Include="DataLayer\JobDB.cs" />
+    <Compile Include="DataLayer\LogBookDB.cs" />
+    <Compile Include="DataLayer\SettingsDB.cs" />
+    <Compile Include="GUILayer\CreateCrewMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\CreateCrewMember.designer.cs">
+      <DependentUpon>CreateCrewMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\CreateGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\CreateGroup.designer.cs">
+      <DependentUpon>CreateGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\CreateInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\CreateInventory.designer.cs">
+      <DependentUpon>CreateInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\CreateJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\CreateJob.designer.cs">
+      <DependentUpon>CreateJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\CreateLogItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\CreateLogItem.designer.cs">
+      <DependentUpon>CreateLogItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\InventoryManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\InventoryManagement.designer.cs">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ListOfEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ListOfEmployees.designer.cs">
+      <DependentUpon>ListOfEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\ListOfJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\ListOfJobs.designer.cs">
+      <DependentUpon>ListOfJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\LogBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\LogBook.designer.cs">
+      <DependentUpon>LogBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\MasterGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\MasterGUI.designer.cs">
+      <DependentUpon>MasterGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\MyTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Settings.designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\UpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\UpdateEmployee.designer.cs">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\UpdateInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\UpdateInventory.designer.cs">
+      <DependentUpon>UpdateInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\UpdateJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\UpdateJob.designer.cs">
+      <DependentUpon>UpdateJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\UpdateLogItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\UpdateLogItem.designer.cs">
+      <DependentUpon>UpdateLogItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\UpdateSubGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\UpdateSubGroup.designer.cs">
+      <DependentUpon>UpdateSubGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUILayer\CreateCrewMember.resx">
+      <DependentUpon>CreateCrewMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\CreateGroup.resx">
+      <DependentUpon>CreateGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\CreateInventory.resx">
+      <DependentUpon>CreateInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\CreateJob.resx">
+      <DependentUpon>CreateJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\CreateLogItem.resx">
+      <DependentUpon>CreateLogItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\InventoryManagement.resx">
+      <DependentUpon>InventoryManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ListOfEmployees.resx">
+      <DependentUpon>ListOfEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\ListOfJobs.resx">
+      <DependentUpon>ListOfJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\LogBook.resx">
+      <DependentUpon>LogBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\MasterGUI.resx">
+      <DependentUpon>MasterGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\UpdateEmployee.resx">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\UpdateInventory.resx">
+      <DependentUpon>UpdateInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\UpdateJob.resx">
+      <DependentUpon>UpdateJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\UpdateLogItem.resx">
+      <DependentUpon>UpdateLogItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUILayer\UpdateSubGroup.resx">
+      <DependentUpon>UpdateSubGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
